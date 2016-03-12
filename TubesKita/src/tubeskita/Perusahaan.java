@@ -15,6 +15,14 @@ public class Perusahaan extends Orang{
     private Lowongan[] daftarLowongan = new Lowongan[100];
     private int numOfLowongan = 0;
     
+    public Perusahaan(String nama, String alamat, String jenisKelamin){
+        super(nama,alamat,jenisKelamin);
+    }
+    
+    public Perusahaan(String nama, String alamat, String jenisKelamin, int usia, int noPe){
+        super(nama,alamat,jenisKelamin,usia,noPe);
+    }
+    
     public void createLowongan(int idLowongan, Date deadline){
         if(numOfLowongan<100){
             daftarLowongan[numOfLowongan] = new Lowongan(idLowongan, deadline);
@@ -45,5 +53,10 @@ public class Perusahaan extends Orang{
             indeks++;
         }
         daftarLowongan[indeks] = null; 
+    }
+    public String displayInfo(){
+        return ("Nama   : "+getNama()+"\nAlamat   : "+getAlamat()+"\nJenis Kelamin   : "+getJenisKelamin()+
+                "\nUsia :"+getUsia()+"\nNo Telepon    :"+getNoPe());
+        
     }
 }

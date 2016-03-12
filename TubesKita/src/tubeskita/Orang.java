@@ -15,7 +15,20 @@ public abstract class Orang {
     private String jenisKelamin;
     private int usia;
     private int noPe;
-
+    
+    public Orang(String nama, String alamat, String jenisKelamin){
+        this.nama = nama;
+        this.alamat = alamat;
+        this.jenisKelamin = jenisKelamin;
+    }
+    
+    public Orang(String nama, String alamat, String jenisKelamin, int usia, int noPe){
+        this.nama = nama;
+        this.alamat = alamat;
+        this.jenisKelamin = jenisKelamin;
+        this.usia = usia;
+        this.noPe = noPe;
+    }
     /**
      * @return the nama
      */
