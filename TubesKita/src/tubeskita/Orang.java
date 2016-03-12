@@ -14,21 +14,22 @@ public abstract class Orang {
 	private String alamat; 
 	private String jenisKelamin;
 	private String usia;
-	private int nope;
+	private int noPe;
+    private int nope;
 	
-	public void setnama(String nama){
+	public void setNama(String nama){
 		this.nama = nama;
 	}
 	
-	public String getnama(){
+	public String getNama(){
 		return nama;
 	}
 	
-	public void setalamat(String alamat){
+	public void setAlamat(String alamat){
 		this.alamat = alamat;
 	}
 	
-	public String getalamat(){
+	public String getAlamat(){
 		return alamat;
 	}
 	
@@ -40,16 +41,16 @@ public abstract class Orang {
 		return jenisKelamin;
 	}
 	
-	public void setusia(String usia){
+	public void setUsia(String usia){
 		this.usia = usia;
 	}
-	public String getusia(){
+	public String getUsia(){
 		return usia;
 	}
-	public void setnope(int nope){
+	public void setnoPe(int nope){
 		this.nope = nope;
 	}
-	public int getnope(){
+	public int getnoPe(){
 		return nope;
 	}
 }
