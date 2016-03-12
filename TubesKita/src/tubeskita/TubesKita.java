@@ -19,8 +19,7 @@ public class TubesKita {
         Perusahaan p = new Perusahaan("susanto","Pesona Bali","Pria");
         p.createLowongan(102, null, "HRD");
         System.out.println(p.getLowongan(0).getNamaPekerjaan());
-        System.out.println(p.getNama());
-        System.out.println(p.getAlamat());
+        System.out.println(p.getLowongan(0).getIdLowongan());
         System.out.println(p.displayInfo());
         
         Pelamar pel = new Pelamar("Fadil", "permata buah batu", "Pria",20,6287);
