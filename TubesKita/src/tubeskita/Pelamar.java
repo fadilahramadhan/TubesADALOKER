@@ -11,4 +11,19 @@ package tubeskita;
  */
 public class Pelamar extends Orang{
     
+    private static BerkasLamaran[] berkas = new BerkasLamaran[10];
+    private int numOfBerkas;
+    public void createBerkas(int id){
+        if (numOfBerkas < 10){
+            berkas[numOfBerkas] = new BerkasLamaran(id);
+            numOfBerkas ++;
+        }
+    }
+    
+    public String displayInfo(){
+        return ("Nama   : "+getNama()+"n/Alamat   : "+getAlamat()+"n/Jenis Kelamin   : "+getJenisKelamin()+
+                "n/Usia :"+getUsia()+"n/No Telepon    :"+getNoPe());
+        
+    }
+    
 }
