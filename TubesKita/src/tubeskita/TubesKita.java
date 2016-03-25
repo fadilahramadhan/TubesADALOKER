@@ -16,10 +16,12 @@ public class TubesKita {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Date date = new Date();
         Perusahaan p = new Perusahaan(209, "susanto","Pesona Bali","Pria");
-        p.createLowongan(102, null, "HRD");
+        p.createLowongan(102, date, "HRD");
         System.out.println(p.getLowongan(0).getNamaPekerjaan());
         System.out.println(p.getLowongan(0).getIdLowongan());
+        System.out.println(p.getLowongan(0).getDeadline());
         System.out.println(p.displayInfo());
         System.out.println(p.getLowonganById(102).getNamaPekerjaan());
         
