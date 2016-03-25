@@ -14,9 +14,6 @@ public class BerkasLamaran {
     private int idBerkas;
     private String cv;
     
-    public BerkasLamaran(int id){
-        this.idBerkas=id;
-    }
     
     public BerkasLamaran (int id, String cv){
         this.idBerkas=id;

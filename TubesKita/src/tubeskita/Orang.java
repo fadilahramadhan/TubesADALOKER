@@ -98,4 +98,9 @@ public abstract class Orang {
     public void setNoPe(int noPe) {
         this.noPe = noPe;
     }
+
+    @Override
+    public String toString() {
+        return "Orang{" + "nama=" + nama + ", alamat=" + alamat + ", jenisKelamin=" + jenisKelamin + ", usia=" + usia + ", noPe=" + noPe + '}';
+    }
 }

@@ -22,11 +22,10 @@ public class TubesKita {
         System.out.println(p.getLowongan(0).getIdLowongan());
         System.out.println(p.displayInfo());
         
-        Pelamar pel = new Pelamar("Fadil", "permata buah batu", "Pria",20,6287);
+        Pelamar pel = new Pelamar(101, "Fadil", "permata buah batu", "Pria");
         pel.createBerkas(201);
         System.out.println(pel.displayInfo());        
-        System.out.println(pel.getBerkas(0).getIdBerkas());
+        System.out.println(pel.getBerkas().getIdBerkas());
         
-    }
-    
+    }   
 }
