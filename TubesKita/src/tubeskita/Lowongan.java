@@ -59,7 +59,6 @@ public class Lowongan {
                 break;
             }
         }
-        //return berkasMasuk[index];
         return berkasMasuk.get(idx);
     }
 

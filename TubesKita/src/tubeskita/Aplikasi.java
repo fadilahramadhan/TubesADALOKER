@@ -15,8 +15,8 @@ public class Aplikasi {
 
     private ArrayList<Perusahaan> daftarPerusahaan = new ArrayList<>(); 
     private ArrayList<Pelamar> daftarPelamar = new ArrayList<>(); 
-    public void addPerusahaan(String nama, String alamat, String jenisKelamin) {
-        daftarPerusahaan.add(new Perusahaan(nama, alamat, jenisKelamin));
+    public void addPerusahaan(int id,String nama, String alamat, String jenisKelamin) {
+        daftarPerusahaan.add(new Perusahaan(id,nama, alamat, jenisKelamin));
     }
 
     public void addPelamar(int id, String nama, String alamat, String jenisKelamin) {

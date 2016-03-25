@@ -24,16 +24,13 @@ public class Perusahaan extends Orang{
     private ArrayList<Lowongan> daftarLowongan = new ArrayList<>();
             
     private int numOfLowongan = 0;
-    
-    public Perusahaan(String nama, String alamat, String jenisKelamin){
-        super(nama,alamat,jenisKelamin);
+
+    public Perusahaan(int idPerusahaan, String nama, String alamat, String jenisKelamin) {
+        super(nama, alamat, jenisKelamin);
+        this.idPerusahaan = idPerusahaan;
     }
     
-    public Perusahaan(String nama, String alamat, String jenisKelamin, int usia, int noPe){
-        super(nama,alamat,jenisKelamin,usia,noPe);
-    }
-    
-    
+
     public void createLowongan(int idLowongan, Date deadline, String namaPekerjaan){
         this.daftarLowongan.add(new Lowongan(idLowongan, deadline, namaPekerjaan));
           
@@ -43,7 +40,7 @@ public class Perusahaan extends Orang{
         return daftarLowongan.get(index);
     }
 
-    public Lowongan getLowongan1(int id){
+    public Lowongan getLowonganById(int id){
         int idx = -1;
         for (int i = 0; i < daftarLowongan.size(); i++) {
             if (daftarLowongan.get(i).getIdLowongan()== id) {
@@ -57,8 +54,8 @@ public class Perusahaan extends Orang{
         daftarLowongan.remove(indeks);
     }
     public String displayInfo(){
-        return ("Nama   : "+getNama()+"\nAlamat   : "+getAlamat()+"\nJenis Kelamin   : "+getJenisKelamin()+
-                "\nUsia :"+getUsia()+"\nNo Telepon    :"+getNoPe());
+        return ("ID Perusahaan : "+getIdPerusahaan()+"\nNama   : "+getNama()+"\nAlamat   : "+getAlamat()+"\nJenis Kelamin   : "+getJenisKelamin()
+                );
         
     }
 }

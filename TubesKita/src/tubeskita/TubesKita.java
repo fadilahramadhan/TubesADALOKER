@@ -16,16 +16,17 @@ public class TubesKita {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Perusahaan p = new Perusahaan("susanto","Pesona Bali","Pria");
+        Perusahaan p = new Perusahaan(209, "susanto","Pesona Bali","Pria");
         p.createLowongan(102, null, "HRD");
         System.out.println(p.getLowongan(0).getNamaPekerjaan());
         System.out.println(p.getLowongan(0).getIdLowongan());
         System.out.println(p.displayInfo());
+        System.out.println(p.getLowonganById(102).getNamaPekerjaan());
         
         Pelamar pel = new Pelamar(101, "Fadil", "permata buah batu", "Pria");
-        pel.createBerkas(201);
-        System.out.println(pel.displayInfo());        
+        pel.createBerkas(201);      
         System.out.println(pel.getBerkas().getIdBerkas());
+        System.out.println(pel.getBerkas().getCv());
         
     }   
 }
