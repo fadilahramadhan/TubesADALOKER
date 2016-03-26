@@ -5,6 +5,7 @@
  */
 package tubeskita;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,67 +13,76 @@ import java.util.Date;
  * @author Acer
  */
 public class Lowongan {
-    private BerkasLamaran[] berkasMasuk = new BerkasLamaran[100];
-    private BerkasLamaran[] berkasDiterima = new BerkasLamaran[100];
+    private ArrayList<BerkasLamaran> berkasMasuk = new ArrayList<>();
+    private ArrayList<BerkasLamaran> berkasDiterima = new ArrayList<>();
     private int numOfBerkasMasuk = 0;
     private Date deadline;
     private String namaPekerjaan;
     private int idLowongan;
     
-    public Lowongan(int idLowongan, Date deadline){
+    public Lowongan(int idLowongan, Date deadline) {
         this.deadline = deadline;
         this.idLowongan = idLowongan;
     }
-    
-    public Lowongan(int idLowongan, Date deadline,String namaPekerjaan){
+
+    public Lowongan(int idLowongan, Date deadline, String namaPekerjaan) {
         this.deadline = deadline;
         this.namaPekerjaan = namaPekerjaan;
         this.idLowongan = idLowongan;
     }
-    
-    public void addBerkas(BerkasLamaran b){
-        this.berkasMasuk[numOfBerkasMasuk] = b;
-        numOfBerkasMasuk++;
-    }
-    
-    public void terimaBerkas(){
-        this.berkasMasuk[numOfBerkasMasuk] = this.berkasDiterima[numOfBerkasMasuk];
-        numOfBerkasMasuk++;
-    }
-    
-    public BerkasLamaran getBerkasMasuk(int index){
-        return berkasMasuk[index];
+
+    public void addBerkas(BerkasLamaran b) {
+        this.berkasMasuk.add(b);
     }
 
-    public BerkasLamaran getBerkasMasuk1(int id){
-        int indeks = 0;
-        while (berkasMasuk[indeks].getIdBerkas() != id){
-            indeks++;
+    public void terimaBerkas(BerkasLamaran b) {
+
+        for (int i = 0; i < berkasMasuk.size(); i++) {
+            if (berkasMasuk.get(i).equals(b)) {
+                berkasDiterima.add(b);
+                removeBerkasMasuk(i);
+            }
         }
-        return berkasMasuk[indeks];
+
     }
     
-    public BerkasLamaran removeBerkasMasuk(int id){
-        int indeks = 0;
-        while (berkasMasuk[indeks].getIdBerkas() != id){
-            indeks++;
+    public int getSizeBerkasMasuk(){
+        return berkasMasuk.size();
+    }
+    
+    public int getSizeBerkasDiterima(){
+        return berkasDiterima.size();
+    }
+
+    public BerkasLamaran getBerkasMasuk(int index) {
+        return berkasMasuk.get(index);
+    }
+
+    public BerkasLamaran getBerkasMasukByID(int id) {
+        int idx = -1;
+        for (int i = 0; i < berkasMasuk.size(); i++) {
+            if (berkasMasuk.get(i).getIdBerkas() == id) {
+                idx = i;
+                break;
+            }
         }
-        return berkasMasuk[indeks] = null;
+        return berkasMasuk.get(idx);
     }
-    
-    public BerkasLamaran getBerkasDiterima(int index){
-        return berkasDiterima[index];
+
+    public void removeBerkasMasuk(int idx) {
+        berkasMasuk.remove(idx);
     }
-    
-    
-    
+
+    public BerkasLamaran getBerkasDiterima(int index) {
+        return berkasDiterima.get(index);
+    }
+
     /**
      * @return the deadline
      */
     public Date getDeadline() {
         return deadline;
     }
-
     /**
      * @param deadline the deadline to set
      */

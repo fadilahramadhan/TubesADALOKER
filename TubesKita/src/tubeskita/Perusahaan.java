@@ -5,6 +5,7 @@
  */
 package tubeskita;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,38 +13,53 @@ import java.util.Date;
  * @author Acer
  */
 public class Perusahaan extends Orang{
-    private Lowongan[] daftarLowongan = new Lowongan[100];
-    private int numOfLowongan = 0;
+    private int idPerusahaan;
+    private ArrayList<Lowongan> daftarLowongan = new ArrayList<>();
     
-    public void createLowongan(int idLowongan, Date deadline){
-        if(numOfLowongan<100){
-            daftarLowongan[numOfLowongan] = new Lowongan(idLowongan, deadline);
-            numOfLowongan++;
-        }  
+    public int getIdPerusahaan() {
+        return idPerusahaan;
     }
+
+    public void setIdPerusahaan(int idPerusahaan) {
+        this.idPerusahaan = idPerusahaan;
+    }
+            
+    public int getSizeLowongan(){
+        return daftarLowongan.size();
+    }
+    private int numOfLowongan = 0;
+
+    public Perusahaan(int idPerusahaan, String nama, String alamat, String jenisKelamin) {
+        super(nama, alamat, jenisKelamin);
+        this.idPerusahaan = idPerusahaan;
+    }
+    
+
     public void createLowongan(int idLowongan, Date deadline, String namaPekerjaan){
-        if(numOfLowongan<100){
-            daftarLowongan[numOfLowongan] = new Lowongan(idLowongan, deadline, namaPekerjaan);
-            numOfLowongan++;
-        }  
+        this.daftarLowongan.add(new Lowongan(idLowongan, deadline, namaPekerjaan));
+          
     }
     
     public Lowongan getLowongan(int index){
-        return daftarLowongan[index];
+        return daftarLowongan.get(index);
     }
 
-    public Lowongan getLowongan1(int id){
-        int indeks = 0;
-        while (daftarLowongan[indeks].getIdLowongan() != id){
-            indeks++;
+    public Lowongan getLowonganById(int id){
+        int idx = -1;
+        for (int i = 0; i < daftarLowongan.size(); i++) {
+            if (daftarLowongan.get(i).getIdLowongan()== id) {
+                idx = i;
+                break;
+            }
         }
-        return daftarLowongan[indeks];
+        return daftarLowongan.get(idx);
     }
-    public void removeLowongan(int id){
-        int indeks = 0;
-        while (daftarLowongan[indeks].getIdLowongan() != id){
-            indeks++;
-        }
-        daftarLowongan[indeks] = null; 
+    public void removeLowongan(int indeks){
+        daftarLowongan.remove(indeks);
+    }
+    public String displayInfo(){
+        return ("ID Perusahaan : "+getIdPerusahaan()+"\nNama   : "+getNama()+"\nAlamat   : "+getAlamat()+"\nJenis Kelamin   : "+getJenisKelamin()
+                );
+        
     }
 }
