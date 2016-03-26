@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package tubeskita;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -13,7 +14,8 @@ import java.util.Date;
  */
 public class Perusahaan extends Orang{
     private int idPerusahaan;
-
+    private ArrayList<Lowongan> daftarLowongan = new ArrayList<>();
+    
     public int getIdPerusahaan() {
         return idPerusahaan;
     }
@@ -21,8 +23,10 @@ public class Perusahaan extends Orang{
     public void setIdPerusahaan(int idPerusahaan) {
         this.idPerusahaan = idPerusahaan;
     }
-    private ArrayList<Lowongan> daftarLowongan = new ArrayList<>();
             
+    public int getSizeLowongan(){
+        return daftarLowongan.size();
+    }
     private int numOfLowongan = 0;
 
     public Perusahaan(int idPerusahaan, String nama, String alamat, String jenisKelamin) {

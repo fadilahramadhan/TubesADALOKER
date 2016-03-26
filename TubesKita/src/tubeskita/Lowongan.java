@@ -13,14 +13,13 @@ import java.util.Date;
  * @author Acer
  */
 public class Lowongan {
-
     private ArrayList<BerkasLamaran> berkasMasuk = new ArrayList<>();
     private ArrayList<BerkasLamaran> berkasDiterima = new ArrayList<>();
     private int numOfBerkasMasuk = 0;
     private Date deadline;
     private String namaPekerjaan;
     private int idLowongan;
-
+    
     public Lowongan(int idLowongan, Date deadline) {
         this.deadline = deadline;
         this.idLowongan = idLowongan;
@@ -45,6 +44,14 @@ public class Lowongan {
             }
         }
 
+    }
+    
+    public int getSizeBerkasMasuk(){
+        return berkasMasuk.size();
+    }
+    
+    public int getSizeBerkasDiterima(){
+        return berkasDiterima.size();
     }
 
     public BerkasLamaran getBerkasMasuk(int index) {
@@ -76,7 +83,6 @@ public class Lowongan {
     public Date getDeadline() {
         return deadline;
     }
-
     /**
      * @param deadline the deadline to set
      */
