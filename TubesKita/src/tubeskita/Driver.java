@@ -10,5 +10,8 @@ package tubeskita;
  * @author HAFID
  */
 public class Driver {
-    
+    public static void main(String[] args) {
+        Aplikasi a = new Aplikasi();
+        a.menuUtama();
+    }
 }

@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author HAFID
  */
 public class Aplikasi {
-    int idperusahaan = 1;
+    int idperusahaan = 0;
     int idpelamar = 1;
     private ArrayList<Perusahaan> daftarPerusahaan = new ArrayList<>(); 
     private ArrayList<Pelamar> daftarPelamar = new ArrayList<>(); 
@@ -57,9 +57,9 @@ public class Aplikasi {
     
     public void tambah(){
         Scanner inputP = new Scanner(System.in);
-        System.out.println("Buka Lowongan");
-        System.out.println("ID Perusahaan"+idperusahaan);
         idperusahaan++;
+        System.out.println("Buka Lowongan");
+        System.out.println("ID Perusahaan : "+idperusahaan);
         System.out.print("Nama Perusahaan : ");
         String nama = inputP.nextLine();
         System.out.print("Alamat : ");
@@ -77,7 +77,7 @@ public class Aplikasi {
         String user = input.next();
         System.out.print("Password : ");
         String pswd = input.next();
-        if (user.equals("admin") && pswd.equals(" ")){
+        if (user.equals("admin") && pswd.equals("asd")){
             Scanner pil = new Scanner(System.in);
             System.out.println("====MENU PERUSAHAAN====");
             System.out.println("1. Create Lowongan");
@@ -86,7 +86,7 @@ public class Aplikasi {
             System.out.println("4. Menu Utama");
             System.out.println("List Perusahaan");
             for (int i = 0; i < daftarPerusahaan.size(); i++) {
-                System.out.println(daftarPerusahaan.get(i)+". "+daftarPerusahaan.get(i).getNama());
+                System.out.println(daftarPerusahaan.get(i).getIdPerusahaan()+". "+daftarPerusahaan.get(i).getNama());
             }
             System.out.print("Masukkan Pilihan : ");
             int pilih = pil.nextInt();
@@ -115,6 +115,7 @@ public class Aplikasi {
                             }
                         }
                     }
+                    break;
                 }
                 case 3:{
                     Scanner id = new Scanner(System.in);
