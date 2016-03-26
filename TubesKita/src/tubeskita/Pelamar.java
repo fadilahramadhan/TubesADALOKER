@@ -41,5 +41,4 @@ public class Pelamar extends Orang{
         return ("ID Pelamar : "+getIdPelamar()+"\nNama   : "+getNama()+"\nAlamat   : "+getAlamat()+"\nJenis Kelamin   : "+getJenisKelamin());
         
     }
-    
 }

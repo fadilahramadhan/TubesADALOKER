@@ -10,7 +10,6 @@ package tubeskita;
  * @author Acer
  */
 public class BerkasLamaran {
-    
     private int idBerkas;
     private String cv;
     

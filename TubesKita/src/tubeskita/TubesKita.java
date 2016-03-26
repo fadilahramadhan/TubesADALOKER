@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package tubeskita;
+
 import java.util.Date;
+
 /**
  *
  * @author Acer
@@ -15,7 +17,6 @@ public class TubesKita {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         Date date = new Date();
         Perusahaan p = new Perusahaan(209, "susanto","Pesona Bali","Pria");
         p.createLowongan(102, date, "HRD");
@@ -30,5 +31,5 @@ public class TubesKita {
         System.out.println(pel.getBerkas().getIdBerkas());
         System.out.println(pel.getBerkas().getCv());
         
-    }   
+    }
 }
