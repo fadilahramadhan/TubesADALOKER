@@ -38,12 +38,10 @@ public class ControllerMenuPelamar implements ActionListener{
             
         } else if (o.equals(menuPelamar.getBtnProfilPelamar())) {
             ControllerProfilPelamar profilPelamar = new ControllerProfilPelamar(app);
-            //belum
             menuPelamar.dispose();
             
         } else if (o.equals(menuPelamar.getBtnTambahPelamar())){
             ControllerTambahPelamar tambahPelamar = new ControllerTambahPelamar(app);
-            //belum
             menuPelamar.dispose();
             
         }

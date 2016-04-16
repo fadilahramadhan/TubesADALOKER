@@ -41,7 +41,7 @@ public class ControllerLihatLowongan implements ActionListener{
             lihatLowongan.dispose();
             
         } else if(o.equals(lihatLowongan.getBtnDaftar())){
-            String idPel = lihatLowongan.getTextIdLowongan().getText();
+            String idPel = lihatLowongan.getTextIdPelamar().getText();
             String idPer = lihatLowongan.getTextIdPerusahaan().getText();
             String idLow = lihatLowongan.getTextIdLowongan().getText();
             

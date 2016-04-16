@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import View.LihatPelamar;
 import View.MenuPerusahaan;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,6 +44,7 @@ public class ControllerMenuPerusahaan implements ActionListener{
             menuPerusahaan.dispose();
         } else if (o.equals(menuPerusahaan.getBtnTerimaPelamar())){
             ControllerTerimaPelamar terimaPelamar = new ControllerTerimaPelamar(app);
+            terimaPelamar.displayPelamarMasuk();
         }
     }    
 }

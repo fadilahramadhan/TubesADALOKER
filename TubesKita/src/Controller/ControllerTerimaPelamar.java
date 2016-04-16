@@ -24,6 +24,9 @@ public class ControllerTerimaPelamar implements ActionListener{
         terimaPelamar.setVisible(true);
         this.app = ap;
     }
+    public void displayPelamarMasuk(){
+        terimaPelamar.getTextAreaPelamarMasuk().setText(app.getAllPelamarMasuk());
+    }
     
     @Override
     public void actionPerformed(ActionEvent e) {

@@ -38,12 +38,10 @@ public class ControllerLihatPelamar implements ActionListener{
         if (o.equals(lihatPelamar.getBtnKeMenuUtama())) {
             ControllerMenuAwal menuAwal = new ControllerMenuAwal(app);
             lihatPelamar.dispose();
-            //belum;
             
         }else if (o.equals(lihatPelamar.getBtnBack())){
             ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan(app);
             lihatPelamar.dispose();
-            //belum
             
         }
     }
