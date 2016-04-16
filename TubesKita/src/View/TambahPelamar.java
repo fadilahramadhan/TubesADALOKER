@@ -15,6 +15,7 @@ import Model.Lowongan;
 import Model.Orang;
 import Model.Pelamar;
 import Model.Perusahaan;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 public class TambahPelamar extends javax.swing.JFrame {
@@ -45,7 +46,7 @@ public class TambahPelamar extends javax.swing.JFrame {
         textNama = new javax.swing.JTextField();
         textJenisKelamin = new javax.swing.JTextField();
         textAlamat = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnBuatPelamar = new javax.swing.JButton();
         textIdPelamar = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
@@ -69,7 +70,7 @@ public class TambahPelamar extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Jenis Kelamin");
 
-        jButton1.setText("Buat Pelamar");
+        btnBuatPelamar.setText("Buat Pelamar");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("ID Pelamar");
@@ -100,7 +101,7 @@ public class TambahPelamar extends javax.swing.JFrame {
                             .addComponent(textAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textNama, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1)
+                            .addComponent(btnBuatPelamar)
                             .addComponent(textIdPelamar, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -130,7 +131,7 @@ public class TambahPelamar extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(textJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnBuatPelamar)
                 .addGap(33, 33, 33))
         );
 
@@ -151,37 +152,7 @@ public class TambahPelamar extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TambahPelamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TambahPelamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TambahPelamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TambahPelamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TambahPelamar().setVisible(true);
-            }
-        });
-    }
 
     public JButton getBtnBack() {
         return btnBack;
@@ -191,8 +162,8 @@ public class TambahPelamar extends javax.swing.JFrame {
         return btnKeMenuUtama;
     }
 
-    public JButton getjButton1() {
-        return jButton1;
+    public JButton getBtnBuatPelamar() {
+        return btnBuatPelamar;
     }
 
     public JTextField getTextAlamat() {
@@ -211,11 +182,15 @@ public class TambahPelamar extends javax.swing.JFrame {
         return textNama;
     }
 
+    public void addActionListener (ActionListener e){
+        btnBack.addActionListener(e);
+        btnKeMenuUtama.addActionListener(e);
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnBuatPelamar;
     private javax.swing.JButton btnKeMenuUtama;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -49,7 +49,15 @@ public class Aplikasi {
         }
         return a;
     }
-
+    
+    public String getAllPerusahaan(){
+        String a = "";
+        for (int i = 0; i < daftarPerusahaan.size(); i++) {
+            a = a + daftarPerusahaan.get(i).getIdPerusahaan() + ". " + daftarPerusahaan.get(i).getNama() + "\n";
+        }
+        return a;
+    }
+    
     public Perusahaan getPerusahaan(int id) {
         Perusahaan a = null;
         for (int i = 0; i < daftarPerusahaan.size(); i++) {
@@ -97,9 +105,7 @@ public class Aplikasi {
             System.out.println("4. Terima Pelamar");
             System.out.println("5. Menu Utama");
             System.out.println("List Perusahaan");
-            for (int i = 0; i < daftarPerusahaan.size(); i++) {
-                System.out.println(daftarPerusahaan.get(i).getIdPerusahaan() + ". " + daftarPerusahaan.get(i).getNama());
-            }
+            System.out.println(getAllPerusahaan());
             System.out.print("Masukkan Pilihan : ");
             int pilih = pil.nextInt();
             switch (pilih) {

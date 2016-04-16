@@ -15,6 +15,7 @@ import Model.Lowongan;
 import Model.Orang;
 import Model.Pelamar;
 import Model.Perusahaan;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -55,6 +56,7 @@ public class BuatLowongan extends javax.swing.JFrame {
         btnBuatLowongan = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         TextAreaListPerusahaan = new javax.swing.JTextArea();
+        btnBack = new javax.swing.JButton();
 
         labelJudulPerusahaan.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         labelJudulPerusahaan.setText("Perusahaan");
@@ -90,19 +92,22 @@ public class BuatLowongan extends javax.swing.JFrame {
         TextAreaListPerusahaan.setRows(5);
         jScrollPane2.setViewportView(TextAreaListPerusahaan);
 
+        btnBack.setText("Back");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
+                        .addComponent(btnBack)
+                        .addGap(71, 71, 71)
                         .addComponent(labelJudulPerusahaan1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                         .addComponent(btnKeMenuUtama1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -147,7 +152,9 @@ public class BuatLowongan extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 11, Short.MAX_VALUE)
+                        .addComponent(btnBack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,37 +197,7 @@ public class BuatLowongan extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BuatLowongan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BuatLowongan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BuatLowongan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BuatLowongan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BuatLowongan().setVisible(true);
-            }
-        });
-    }
 
     public JTextArea getTextAreaListPerusahaan() {
         return TextAreaListPerusahaan;
@@ -254,10 +231,21 @@ public class BuatLowongan extends javax.swing.JFrame {
     public JTextField getTextNamaPekerjaanIn() {
         return textNamaPekerjaanIn;
     }
+
+    public JButton getBtnBack() {
+        return btnBack;
+    }
+    
+    public void addActionListener(ActionListener e){
+        btnBuatLowongan.addActionListener(e);
+        btnKeMenuUtama1.addActionListener(e);    
+        btnBack.addActionListener(e);
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea TextAreaListPerusahaan;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnBuatLowongan;
     private javax.swing.JButton btnKeMenuUtama;
     private javax.swing.JButton btnKeMenuUtama1;
