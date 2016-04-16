@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package viewConsole;
 
+import Model.Lowongan;
+import Model.Pelamar;
+import Model.Perusahaan;
 import java.awt.BorderLayout;
 import java.time.Instant;
 import java.util.Date;
