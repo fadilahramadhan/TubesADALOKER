@@ -84,6 +84,8 @@ public class BuatLowongan extends javax.swing.JFrame {
 
         jLabel6.setText("DeadLine");
 
+        textDeadLineIn.setEditable(false);
+
         btnKeMenuUtama1.setText("Menu Utama");
 
         btnBuatLowongan.setText("Buat Lowongan");
@@ -145,14 +147,14 @@ public class BuatLowongan extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(labelJudulPerusahaan1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(0, 2, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(btnKeMenuUtama1)))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 11, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnBack)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel1)))

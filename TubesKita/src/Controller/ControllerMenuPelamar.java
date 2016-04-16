@@ -8,6 +8,7 @@ package Controller;
 import View.MenuPelamar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import viewConsole.Aplikasi;
 
 /**
  *
@@ -15,31 +16,33 @@ import java.awt.event.ActionListener;
  */
 public class ControllerMenuPelamar implements ActionListener{
     MenuPelamar menuPelamar;
+    Aplikasi app;
 
-    public ControllerMenuPelamar() {
+    public ControllerMenuPelamar(Aplikasi ap) {
         menuPelamar = new MenuPelamar();
         menuPelamar.addActionListener(this);
         menuPelamar.setVisible(true);
+        this.app = ap;
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (o.equals(menuPelamar.getBtnKeMenuUtama())) {
-            ControllerMenuAwal menuAwal = new ControllerMenuAwal();
+            ControllerMenuAwal menuAwal = new ControllerMenuAwal(app);
             menuPelamar.dispose();
         } else if (o.equals(menuPelamar.getBtnLihatLowongan())){
-            ControllerLihatLowongan lihatLowongan = new ControllerLihatLowongan();
-            //belum
+            ControllerLihatLowongan lihatLowongan = new ControllerLihatLowongan(app);
+            lihatLowongan.displayListLowongan();
             menuPelamar.dispose();
             
         } else if (o.equals(menuPelamar.getBtnProfilPelamar())) {
-            ControllerProfilPelamar profilPelamar = new ControllerProfilPelamar();
+            ControllerProfilPelamar profilPelamar = new ControllerProfilPelamar(app);
             //belum
             menuPelamar.dispose();
             
         } else if (o.equals(menuPelamar.getBtnTambahPelamar())){
-            ControllerTambahPelamar tambahPelamar = new ControllerTambahPelamar();
+            ControllerTambahPelamar tambahPelamar = new ControllerTambahPelamar(app);
             //belum
             menuPelamar.dispose();
             

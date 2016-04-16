@@ -79,7 +79,7 @@
                                       <Component id="textAlamat" alignment="0" min="-2" pref="154" max="-2" attributes="0"/>
                                       <Component id="textJenisKelamin" alignment="0" min="-2" pref="154" max="-2" attributes="0"/>
                                       <Component id="textNama" alignment="0" min="-2" pref="154" max="-2" attributes="0"/>
-                                      <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnBuatBerkas" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -121,7 +121,7 @@
                       <Component id="textJenisKelamin" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="35" max="32767" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBuatBerkas" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -188,7 +188,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="textNama">
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnBuatBerkas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buat Berkas Lamaran"/>
           </Properties>

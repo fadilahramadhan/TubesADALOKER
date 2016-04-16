@@ -17,23 +17,31 @@ import viewConsole.Aplikasi;
 public class ControllerLihatPelamar implements ActionListener{
     LihatPelamar lihatPelamar;
     Aplikasi app;
+    
+    public void displayListPelamarMasuk(){
+        lihatPelamar.getTextAreaPelamarMasuk().setText(app.getAllPelamarMasuk());
+    }
+    public void displayListPelamarDiterima(){
+        lihatPelamar.getTextAreaPelamarDiterima().setText(app.getAllPelamarDiterima());
+    }
 
-    public ControllerLihatPelamar() {
+    public ControllerLihatPelamar(Aplikasi ap) {
         lihatPelamar = new LihatPelamar();
         lihatPelamar.addActionListener(this);
         lihatPelamar.setVisible(true);
+        this.app = ap;
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
        Object o = e.getSource();
         if (o.equals(lihatPelamar.getBtnKeMenuUtama())) {
-            ControllerMenuAwal menuAwal = new ControllerMenuAwal();
+            ControllerMenuAwal menuAwal = new ControllerMenuAwal(app);
             lihatPelamar.dispose();
             //belum;
             
         }else if (o.equals(lihatPelamar.getBtnBack())){
-            ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan();
+            ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan(app);
             lihatPelamar.dispose();
             //belum
             

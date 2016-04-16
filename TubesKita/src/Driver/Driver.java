@@ -17,9 +17,10 @@ import java.util.Date;
  */
 public class Driver {
     public static void main(String[] args) {
-        Controller.ControllerMenuAwal c = new ControllerMenuAwal();
         Aplikasi viewConsole = new Aplikasi();
-        viewConsole.menuUtama();
+//        viewConsole.menuUtama();
+        Controller.ControllerMenuAwal c = new ControllerMenuAwal(viewConsole);
+        
 //        Date a = new Date(2016-1900,0,31);
 //        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 //        System.out.println(sdf.format(a));

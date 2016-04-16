@@ -8,6 +8,7 @@ package Controller;
 import View.MenuAwal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import viewConsole.Aplikasi;
 
 /**
  *
@@ -15,23 +16,26 @@ import java.awt.event.ActionListener;
  */
 public class ControllerMenuAwal implements ActionListener{
     MenuAwal menuAwal;
-
-    public ControllerMenuAwal() {
+    
+    Aplikasi app;
+    public ControllerMenuAwal(Aplikasi ap) {
         menuAwal = new MenuAwal();
         menuAwal.addActionListener(this);
         menuAwal.setVisible(true);
+        
+        app = ap;
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (o.equals(menuAwal.getBtnPerusahaan())) {
-            ControllerMenuPerusahaan mPerusahaan = new ControllerMenuPerusahaan();
+            ControllerMenuPerusahaan mPerusahaan = new ControllerMenuPerusahaan(app);
             menuAwal.dispose();
         } else if (o.equals(menuAwal.getBtnPelamar())){
-            ControllerMenuPelamar menuPelamar = new ControllerMenuPelamar();
+            ControllerMenuPelamar menuPelamar = new ControllerMenuPelamar(app);
             menuAwal.dispose();
         } else if (o.equals(menuAwal.getBtnTmbhPerusahaan())){
-            ControllerTambahPerusahaan tambahPerusahaan = new ControllerTambahPerusahaan();
+            ControllerTambahPerusahaan tambahPerusahaan = new ControllerTambahPerusahaan(app);
             menuAwal.dispose();
         }
     }

@@ -49,7 +49,7 @@ public class ProfilPelamar extends javax.swing.JFrame {
         textJenisKelamin = new javax.swing.JTextField();
         textAlamat = new javax.swing.JTextField();
         textNama = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnBuatBerkas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,7 +75,7 @@ public class ProfilPelamar extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Jenis Kelamin");
 
-        jButton1.setText("Buat Berkas Lamaran");
+        btnBuatBerkas.setText("Buat Berkas Lamaran");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -110,7 +110,7 @@ public class ProfilPelamar extends javax.swing.JFrame {
                                     .addComponent(textAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(textJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(textNama, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1))))
+                                    .addComponent(btnBuatBerkas))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -140,7 +140,7 @@ public class ProfilPelamar extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(textJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnBuatBerkas)
                 .addGap(33, 33, 33))
         );
 
@@ -175,9 +175,11 @@ public class ProfilPelamar extends javax.swing.JFrame {
         return btnLihatProfil;
     }
 
-    public JButton getjButton1() {
-        return jButton1;
+    public JButton getBtnBuatBerkas() {
+        return btnBuatBerkas;
     }
+
+    
 
     public JTextField getTextAlamat() {
         return textAlamat;
@@ -199,13 +201,14 @@ public class ProfilPelamar extends javax.swing.JFrame {
         btnBack.addActionListener(e);
         btnKeMenuUtama.addActionListener(e);
         btnLihatProfil.addActionListener(e);
+        btnBuatBerkas.addActionListener(e);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnBuatBerkas;
     private javax.swing.JButton btnKeMenuUtama;
     private javax.swing.JButton btnLihatProfil;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

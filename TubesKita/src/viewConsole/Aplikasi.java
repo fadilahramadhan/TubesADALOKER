@@ -49,15 +49,60 @@ public class Aplikasi {
         }
         return a;
     }
-    
-    public String getAllPerusahaan(){
+
+    public String getAllPerusahaan() {
         String a = "";
         for (int i = 0; i < daftarPerusahaan.size(); i++) {
             a = a + daftarPerusahaan.get(i).getIdPerusahaan() + ". " + daftarPerusahaan.get(i).getNama() + "\n";
         }
         return a;
     }
-    
+
+    public String getAllLowongan() {
+        String a = "";
+        for (int i = 0; i < daftarPerusahaan.size(); i++) {
+            a = a + ("" + daftarPerusahaan.get(i).getIdPerusahaan() + ". " + daftarPerusahaan.get(i).getNama() + "\n");
+            for (int j = 0; j < daftarPerusahaan.get(i).getSizeLowongan(); j++) {
+                a = a + ("    " + daftarPerusahaan.get(i).getLowongan(j).getIdLowongan() + ". " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan() + "\n");
+            }
+        }
+        return a;
+    }
+
+    public String getAllPelamarMasuk() {
+        String a = "";
+        for (int i = 0; i < daftarPerusahaan.size(); i++) {
+            a = a + ("" + daftarPerusahaan.get(i).getNama() + "\n");
+            a = a + ("--" + "\n");
+            for (int j = 0; j < daftarPerusahaan.get(i).getSizeLowongan(); j++) {
+                a = a + ("  " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan() + "\n");
+                a = a + ("---" + "\n");
+                for (int k = 0; k < daftarPerusahaan.get(i).getLowongan(j).getSizeBerkasMasuk(); k++) {
+                    a = a + ("    " + daftarPerusahaan.get(i).getLowongan(j).getBerkasMasuk(k).getCv() + "\n");
+                    a = a + ("----" + "\n");
+                }
+            }
+        }
+        return a;
+    }
+
+    public String getAllPelamarDiterima() {
+        String a = "";
+        for (int i = 0; i < daftarPerusahaan.size(); i++) {
+            a = a + ("" + daftarPerusahaan.get(i).getNama()+"\n");
+            a = a + ("--"+"\n");
+            for (int j = 0; j < daftarPerusahaan.get(i).getSizeLowongan(); j++) {
+                a = a + ("  " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan()+"\n");
+                a = a + ("---"+"\n");
+                for (int k = 0; k < daftarPerusahaan.get(i).getLowongan(j).getSizeBerkasMasuk(); k++) {
+                    a = a + ("    " + daftarPerusahaan.get(i).getLowongan(j).getBerkasDiterima(k).getCv()+"\n");
+                    a = a + ("----"+"\n");
+                }
+            }
+        }
+        return a;
+    }
+
     public Perusahaan getPerusahaan(int id) {
         Perusahaan a = null;
         for (int i = 0; i < daftarPerusahaan.size(); i++) {
@@ -74,6 +119,31 @@ public class Aplikasi {
                 daftarPelamar.remove(i);
             }
         }
+    }
+
+    public int getNextIdPerusahaan() {
+        return idperusahaan;
+    }
+
+    public void tambahId() {
+        idperusahaan++;
+    }
+
+    public int getNextIdPelamar() {
+        return idpelamar;
+    }
+
+    public void tambahIdPelamar() {
+
+        idpelamar++;
+    }
+
+    public int getNextIdBerkas() {
+        return idberkas;
+    }
+
+    public void tambahIdBerkas() {
+        idberkas++;
     }
 
     public void tambah() {

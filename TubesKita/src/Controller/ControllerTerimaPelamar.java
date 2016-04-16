@@ -8,6 +8,7 @@ package Controller;
 import View.TerimaPelamar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import viewConsole.Aplikasi;
 
 /**
  *
@@ -15,25 +16,27 @@ import java.awt.event.ActionListener;
  */
 public class ControllerTerimaPelamar implements ActionListener{
     TerimaPelamar terimaPelamar;
+    Aplikasi app;
 
-    public ControllerTerimaPelamar() {
+    public ControllerTerimaPelamar(Aplikasi ap) {
         terimaPelamar = new TerimaPelamar();
         terimaPelamar.addActionListener(this);
         terimaPelamar.setVisible(true);
+        this.app = ap;
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (o.equals(terimaPelamar.getBtnKeMenuUtama())) {
-            ControllerMenuAwal menuAwal = new ControllerMenuAwal();
+            ControllerMenuAwal menuAwal = new ControllerMenuAwal(app);
             terimaPelamar.dispose();
-            //belum;
             
         }else if (o.equals(terimaPelamar.getBtnBack())){
-            ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan();
-            terimaPelamar.dispose();
-            //belum
+            ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan(app);
+            terimaPelamar.dispose();            
+            
+        } else if (o.equals(terimaPelamar.getBtnTerimaPelamar())) {
             
         }
        

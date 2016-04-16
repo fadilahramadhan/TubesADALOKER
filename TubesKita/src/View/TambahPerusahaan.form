@@ -45,11 +45,16 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnTambahPerusahaan" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+              </Group>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="132" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelJudulPerusahaan1" min="-2" max="-2" attributes="0"/>
@@ -69,24 +74,25 @@
                                   <Component id="textAlamat" min="-2" pref="129" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="textJenisKelamin" min="-2" pref="129" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="textNamaPerusahaan" min="-2" pref="129" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="textJenisKelamin" pref="129" max="32767" attributes="0"/>
+                                      <Component id="textIdPerusahaan" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-                  <Component id="btnTambahPerusahaan" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="115" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -111,9 +117,14 @@
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="textJenisKelamin" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textIdPerusahaan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
                   <Component id="btnTambahPerusahaan" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="71" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -156,6 +167,16 @@
         <Component class="javax.swing.JButton" name="btnTambahPerusahaan">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tambah Perusahaan"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Id Perusahaan"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textIdPerusahaan">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -8,6 +8,7 @@ package Controller;
 import View.MenuPerusahaan;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import viewConsole.Aplikasi;
 
 /**
  *
@@ -15,11 +16,13 @@ import java.awt.event.ActionListener;
  */
 public class ControllerMenuPerusahaan implements ActionListener{
     MenuPerusahaan menuPerusahaan;
+    Aplikasi app;
     
-    public ControllerMenuPerusahaan() {
+    public ControllerMenuPerusahaan(Aplikasi ap) {
         menuPerusahaan = new MenuPerusahaan();
         menuPerusahaan.addActionListener(this);
         menuPerusahaan.setVisible(true);
+        this.app = ap;
         
     }
 
@@ -27,19 +30,19 @@ public class ControllerMenuPerusahaan implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if  (o.equals(menuPerusahaan.getBtnKeMenuUtama())){
-            ControllerMenuAwal awal = new ControllerMenuAwal();
+            ControllerMenuAwal awal = new ControllerMenuAwal(app);
             menuPerusahaan.dispose();
         } else if (o.equals(menuPerusahaan.getBtnBuatLowongan())){
-            ControllerBuatLowongan buatlowongan = new ControllerBuatLowongan();
+            ControllerBuatLowongan buatlowongan = new ControllerBuatLowongan(app);
             buatlowongan.displayListPerusahaan();
             menuPerusahaan.dispose();
         } else if (o.equals(menuPerusahaan.getBtnLihatPelamar())){
-            ControllerLihatPelamar lihatPelamar = new ControllerLihatPelamar();
-            
+            ControllerLihatPelamar lihatPelamar = new ControllerLihatPelamar(app);
+            lihatPelamar.displayListPelamarDiterima();
+            lihatPelamar.displayListPelamarMasuk();
             menuPerusahaan.dispose();
         } else if (o.equals(menuPerusahaan.getBtnTerimaPelamar())){
-            ControllerTerimaPelamar terimaPelamar = new ControllerTerimaPelamar();
+            ControllerTerimaPelamar terimaPelamar = new ControllerTerimaPelamar(app);
         }
-    }
-    
+    }    
 }

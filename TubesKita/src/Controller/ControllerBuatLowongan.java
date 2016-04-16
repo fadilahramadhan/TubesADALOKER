@@ -17,10 +17,11 @@ import viewConsole.Aplikasi;
 public class ControllerBuatLowongan implements ActionListener{
     BuatLowongan buatLowongan;
     Aplikasi app;
-    public ControllerBuatLowongan() {
+    public ControllerBuatLowongan(Aplikasi ap) {
         buatLowongan = new BuatLowongan();
         buatLowongan.addActionListener(this);
         buatLowongan.setVisible(true);      
+        this.app = ap;
    }
     public void displayListPerusahaan(){
         buatLowongan.getTextAreaListPerusahaan().setText(app.getAllPerusahaan());
@@ -34,19 +35,18 @@ public class ControllerBuatLowongan implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if  (o.equals(buatLowongan.getBtnKeMenuUtama1())){
-            ControllerMenuAwal awal = new ControllerMenuAwal();
+            ControllerMenuAwal awal = new ControllerMenuAwal(app);
             buatLowongan.dispose();            
         } else if (o.equals(buatLowongan.getBtnBuatLowongan())){
             String idP = buatLowongan.getTextIdPerusahaanIn().getText();
             String idL = buatLowongan.getTextIdLowonganIn().getText();
             String nP = buatLowongan.getTextNamaPekerjaanIn().getText();
-            //belum;
-            
-            ControllerMenuPerusahaan  mPerusahaan = new ControllerMenuPerusahaan();
+            app.getPerusahaan(Integer.parseInt(idP)).createLowongan(Integer.parseInt(idL), null, nP);            
+            ControllerMenuPerusahaan  mPerusahaan = new ControllerMenuPerusahaan(app);
             buatLowongan.dispose();
             
         } else if (o.equals(buatLowongan.getBtnBack())) {
-            ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan();            
+            ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan(app);            
             buatLowongan.dispose();
         }
         

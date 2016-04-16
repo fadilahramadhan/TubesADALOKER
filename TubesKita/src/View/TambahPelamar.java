@@ -72,6 +72,8 @@ public class TambahPelamar extends javax.swing.JFrame {
 
         btnBuatPelamar.setText("Buat Pelamar");
 
+        textIdPelamar.setEditable(false);
+
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("ID Pelamar");
 
@@ -185,6 +187,7 @@ public class TambahPelamar extends javax.swing.JFrame {
     public void addActionListener (ActionListener e){
         btnBack.addActionListener(e);
         btnKeMenuUtama.addActionListener(e);
+        btnBuatPelamar.addActionListener(e);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
