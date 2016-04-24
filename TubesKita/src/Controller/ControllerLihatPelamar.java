@@ -19,10 +19,10 @@ public class ControllerLihatPelamar implements ActionListener{
     Aplikasi app;
     
     public void displayListPelamarMasuk(){
-        lihatPelamar.getTextAreaPelamarMasuk().setText(app.getAllPelamarMasuk());
+        lihatPelamar.getTextAreaPelamarMasuk().setText(this.app.getAllPelamarMasuk());
     }
     public void displayListPelamarDiterima(){
-        lihatPelamar.getTextAreaPelamarDiterima().setText(app.getAllPelamarDiterima());
+        lihatPelamar.getTextAreaPelamarDiterima().setText(this.app.getAllPelamarDiterima());
     }
 
     public ControllerLihatPelamar(Aplikasi ap) {

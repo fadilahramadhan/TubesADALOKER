@@ -45,6 +45,9 @@ public class ControllerProfilPelamar implements ActionListener{
             app.getPelamar(Integer.parseInt(id)).createBerkas(app.getNextIdBerkas()+1);
             app.tambahIdBerkas();
             
+            ControllerMenuPelamar menuPelamar = new ControllerMenuPelamar(app);           
+            profilPelamar.dispose();
+            
         }
     }
 }

@@ -47,6 +47,9 @@ public class ControllerLihatLowongan implements ActionListener{
             
             BerkasLamaran berkas = app.getPelamar(Integer.parseInt(idPel)).getBerkas();
             app.getPerusahaan(Integer.parseInt(idPer)).getLowonganById(Integer.parseInt(idLow)).addBerkas(berkas);
+            
+            ControllerMenuPelamar menuPelamar = new ControllerMenuPelamar(app);            
+            lihatLowongan.dispose();
         }
         
     }

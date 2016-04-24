@@ -72,10 +72,10 @@ public class Aplikasi {
     public String getAllPelamarMasuk() {
         String a = "";
         for (int i = 0; i < daftarPerusahaan.size(); i++) {
-            a = a + ("" + daftarPerusahaan.get(i).getNama() + "\n");
+            a = a + ("" + daftarPerusahaan.get(i).getIdPerusahaan() + ". " + daftarPerusahaan.get(i).getNama() + "\n");
             a = a + ("--" + "\n");
             for (int j = 0; j < daftarPerusahaan.get(i).getSizeLowongan(); j++) {
-                a = a + ("  " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan() + "\n");
+                a = a + ("  " + daftarPerusahaan.get(i).getLowongan(j).getIdLowongan() + ". " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan() + "\n");
                 a = a + ("---" + "\n");
                 for (int k = 0; k < daftarPerusahaan.get(i).getLowongan(j).getSizeBerkasMasuk(); k++) {
                     a = a + ("    " + daftarPerusahaan.get(i).getLowongan(j).getBerkasMasuk(k).getCv() + "\n");
@@ -89,12 +89,12 @@ public class Aplikasi {
     public String getAllPelamarDiterima() {
         String a = "";
         for (int i = 0; i < daftarPerusahaan.size(); i++) {
-            a = a + ("" + daftarPerusahaan.get(i).getNama()+"\n");
+            a = a + ("" + daftarPerusahaan.get(i).getIdPerusahaan() + ". " + daftarPerusahaan.get(i).getNama()+"\n");
             a = a + ("--"+"\n");
             for (int j = 0; j < daftarPerusahaan.get(i).getSizeLowongan(); j++) {
-                a = a + ("  " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan()+"\n");
+                a = a + ("  " + daftarPerusahaan.get(i).getLowongan(j).getIdLowongan() + ". " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan()+"\n");
                 a = a + ("---"+"\n");
-                for (int k = 0; k < daftarPerusahaan.get(i).getLowongan(j).getSizeBerkasMasuk(); k++) {
+                for (int k = 0; k < daftarPerusahaan.get(i).getLowongan(j).getSizeBerkasDiterima(); k++) {
                     a = a + ("    " + daftarPerusahaan.get(i).getLowongan(j).getBerkasDiterima(k).getCv()+"\n");
                     a = a + ("----"+"\n");
                 }
@@ -111,6 +111,11 @@ public class Aplikasi {
             }
         }
         return a;
+    }
+    public void terimaPelamar(int per, int low, int id){
+        lowong = getPerusahaan(per).getLowonganById(low);
+        pel = getPelamar(id);
+        lowong.terimaBerkas(pel.getBerkas());
     }
 
     public void deletePelamar(int id) {
@@ -222,7 +227,7 @@ public class Aplikasi {
                         for (int j = 0; j < daftarPerusahaan.get(i).getSizeLowongan(); j++) {
                             System.out.println("  " + daftarPerusahaan.get(i).getLowongan(j).getNamaPekerjaan());
                             System.out.println("---");
-                            for (int k = 0; k < daftarPerusahaan.get(i).getLowongan(j).getSizeBerkasMasuk(); k++) {
+                            for (int k = 0; k < daftarPerusahaan.get(i).getLowongan(j).getSizeBerkasDiterima(); k++) {
                                 System.out.println("    " + daftarPerusahaan.get(i).getLowongan(j).getBerkasDiterima(k).getCv());
                                 System.out.println("----");
                             }
@@ -361,3 +366,9 @@ public class Aplikasi {
         }
     }
 }
+
+
+
+//        Date a = new Date(2016-1900,0,31);
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//        System.out.println(sdf.format(a));

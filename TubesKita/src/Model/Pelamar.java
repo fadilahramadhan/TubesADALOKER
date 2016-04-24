@@ -38,7 +38,7 @@ public class Pelamar extends Orang{
     }
     
     public String displayInfo(){
-        return ("ID Pelamar : "+getIdPelamar()+"\nNama   : "+getNama()+"\nAlamat   : "+getAlamat()+"\nJenis Kelamin   : "+getJenisKelamin());
+        return ("ID Pelamar : "+getIdPelamar()+"\n    Nama   : "+getNama()+"\n    Alamat   : "+getAlamat()+"\n    Jenis Kelamin   : "+getJenisKelamin());
         
     }
 }

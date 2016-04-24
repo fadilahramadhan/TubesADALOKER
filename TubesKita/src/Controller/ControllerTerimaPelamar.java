@@ -40,7 +40,13 @@ public class ControllerTerimaPelamar implements ActionListener{
             terimaPelamar.dispose();            
             
         } else if (o.equals(terimaPelamar.getBtnTerimaPelamar())) {
+            String idPer = terimaPelamar.getTextIdPerusahaan().getText();
+            String idLow = terimaPelamar.getTextIdLowongan().getText();
+            String idPel = terimaPelamar.getTextIdPelamar().getText();
+            app.terimaPelamar(Integer.parseInt(idPer), Integer.parseInt(idLow), Integer.parseInt(idPel));
             
+            ControllerMenuPerusahaan menuPerusahaan = new ControllerMenuPerusahaan(app);
+            terimaPelamar.dispose();  
         }
        
     }

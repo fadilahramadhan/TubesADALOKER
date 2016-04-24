@@ -41,6 +41,9 @@ public class ControllerTambahPerusahaan implements ActionListener{
             String id =tambahPerusahaan.getTextIdPerusahaan().getText();
             app.addPerusahaan(Integer.parseInt(id), nama, alamat, jk);
             app.tambahId();
+            
+            ControllerMenuAwal menuAwal = new ControllerMenuAwal(app);
+            tambahPerusahaan.dispose();
         }
     }
 }

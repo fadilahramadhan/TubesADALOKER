@@ -15,36 +15,37 @@ import viewConsole.Aplikasi;
  *
  * @author Acer
  */
-public class ControllerMenuPerusahaan implements ActionListener{
+public class ControllerMenuPerusahaan implements ActionListener {
+
     MenuPerusahaan menuPerusahaan;
     Aplikasi app;
-    
+
     public ControllerMenuPerusahaan(Aplikasi ap) {
         menuPerusahaan = new MenuPerusahaan();
         menuPerusahaan.addActionListener(this);
         menuPerusahaan.setVisible(true);
         this.app = ap;
-        
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
-        if  (o.equals(menuPerusahaan.getBtnKeMenuUtama())){
+        if (o.equals(menuPerusahaan.getBtnKeMenuUtama())) {
             ControllerMenuAwal awal = new ControllerMenuAwal(app);
             menuPerusahaan.dispose();
-        } else if (o.equals(menuPerusahaan.getBtnBuatLowongan())){
+        } else if (o.equals(menuPerusahaan.getBtnBuatLowongan())) {
             ControllerBuatLowongan buatlowongan = new ControllerBuatLowongan(app);
             buatlowongan.displayListPerusahaan();
             menuPerusahaan.dispose();
-        } else if (o.equals(menuPerusahaan.getBtnLihatPelamar())){
+        } else if (o.equals(menuPerusahaan.getBtnLihatPelamar())) {
             ControllerLihatPelamar lihatPelamar = new ControllerLihatPelamar(app);
-            lihatPelamar.displayListPelamarDiterima();
             lihatPelamar.displayListPelamarMasuk();
+            lihatPelamar.displayListPelamarDiterima();
             menuPerusahaan.dispose();
-        } else if (o.equals(menuPerusahaan.getBtnTerimaPelamar())){
+        } else if (o.equals(menuPerusahaan.getBtnTerimaPelamar())) {
             ControllerTerimaPelamar terimaPelamar = new ControllerTerimaPelamar(app);
             terimaPelamar.displayPelamarMasuk();
         }
-    }    
+    }
 }

@@ -43,6 +43,9 @@ public class ControllerTambahPelamar implements ActionListener{
             String id = tambahPelamar.getTextIdPelamar().getText();
             app.addPelamar(Integer.parseInt(id), nama, alamat, jk);
             app.tambahIdPelamar();
+            
+            ControllerMenuPelamar menuPelamar = new ControllerMenuPelamar(app);
+            tambahPelamar.dispose();
         }
     }
     

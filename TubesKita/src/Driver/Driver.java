@@ -5,24 +5,21 @@
  */
 package Driver;
 
-
 import Controller.ControllerMenuAwal;
 import viewConsole.Aplikasi;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 
+ *
  * @author HAFID
  */
 public class Driver {
+
     public static void main(String[] args) {
         Aplikasi viewConsole = new Aplikasi();
 //        viewConsole.menuUtama();
         Controller.ControllerMenuAwal c = new ControllerMenuAwal(viewConsole);
-        
-//        Date a = new Date(2016-1900,0,31);
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-//        System.out.println(sdf.format(a));
+
     }
 }
