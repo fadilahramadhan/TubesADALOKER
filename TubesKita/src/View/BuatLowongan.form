@@ -91,18 +91,9 @@
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="textNamaPekerjaanIn" max="32767" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="textDeadLineIn" min="-2" pref="43" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="67" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                      <Component id="textNamaPekerjaanIn" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="btnBuatLowongan" min="-2" max="-2" attributes="0"/>
@@ -156,12 +147,7 @@
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="textNamaPekerjaanIn" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textDeadLineIn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                           <Component id="btnBuatLowongan" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane2" min="-2" pref="203" max="-2" attributes="0"/>
@@ -216,16 +202,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="textNamaPekerjaanIn">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="DeadLine"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textDeadLineIn">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnKeMenuUtama1">
           <Properties>

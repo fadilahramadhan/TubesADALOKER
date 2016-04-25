@@ -46,6 +46,7 @@ public class ControllerMenuPerusahaan implements ActionListener {
         } else if (o.equals(menuPerusahaan.getBtnTerimaPelamar())) {
             ControllerTerimaPelamar terimaPelamar = new ControllerTerimaPelamar(app);
             terimaPelamar.displayPelamarMasuk();
+            menuPerusahaan.dispose();
         }
     }
 }

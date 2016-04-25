@@ -166,12 +166,7 @@ public class Aplikasi {
         menuUtama();
     }
 
-    public void menuPerusahaan() {
-        System.out.print("Username : ");
-        String user = input.next();
-        System.out.print("Password : ");
-        String pswd = input.next();
-        if (user.equals("admin") && pswd.equals("asd")) {
+    public void menuPerusahaan() {        
             Scanner pil = new Scanner(System.in);
             System.out.println("====MENU PERUSAHAAN====");
             System.out.println("1. Create Lowongan");
@@ -189,9 +184,7 @@ public class Aplikasi {
                     System.out.print("ID Perusahaan : ");
                     int idPe = inputInt.nextInt();
                     System.out.print("ID LOWONGAN : ");
-                    int idLo = inputInt.nextInt();
-                    System.out.println("DeadLine : ");
-                    //String deadline = input.nextLine();
+                    int idLo = inputInt.nextInt();                    
                     System.out.print("Nama Pekerjaan : ");
                     String namaPekerjaan = input.next();
                     if (getPerusahaan(idPe).equals(null)) {
@@ -265,20 +258,14 @@ public class Aplikasi {
                     menuUtama();
                 }
             }
-        } else {
-            System.out.println("Username atau Password Anda Salah");
-            System.out.println("Kembali Ke Menu Utama");
-            menuUtama();
-        }
     }
 
     public void menuPelamar() {
         Scanner pil = new Scanner(System.in);
         System.out.println("====MENU PELAMAR====");
         System.out.println("1. Daftar Lamaran");
-        System.out.println("2. Buat Berkas & Melamar");
-        System.out.println("3. Buat Berkas");
-        System.out.println("4. Menu Utama");
+        System.out.println("2. Buat Berkas & Melamar");        
+        System.out.println("3. Menu Utama");
         System.out.print("Masukkan Pilihan : ");
         int pilih = pil.nextInt();
         switch (pilih) {
@@ -322,20 +309,6 @@ public class Aplikasi {
                 break;
             }
             case 3: {
-                idberkas++;
-                System.out.println("Masukkan ID anda : ");
-                int id1 = inputInt.nextInt();
-                Pelamar pel;
-                pel = getPelamar(id1);
-                //daftarPelamar.get(id1).createBerkas(idberkas);
-                pel.createBerkas(idberkas);
-                System.out.println("Berkas Sudah Dibuat : ");
-                System.out.println("Id berkas : " + pel.getBerkas().getIdBerkas());
-                System.out.println(pel.getBerkas().getCv());
-                System.out.println("Data Berhasil Masuk");
-                menuPelamar();
-            }
-            case 4: {
                 menuUtama();
                 break;
             }

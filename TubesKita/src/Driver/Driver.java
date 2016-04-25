@@ -7,8 +7,8 @@ package Driver;
 
 import Controller.ControllerMenuAwal;
 import viewConsole.Aplikasi;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 
 /**
  *
@@ -18,7 +18,7 @@ public class Driver {
 
     public static void main(String[] args) {
         Aplikasi viewConsole = new Aplikasi();
-//        viewConsole.menuUtama();
+      //  viewConsole.menuUtama();
         Controller.ControllerMenuAwal c = new ControllerMenuAwal(viewConsole);
 
     }
